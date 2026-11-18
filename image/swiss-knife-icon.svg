@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101c32"/><stop offset="1" stop-color="#07111f"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#35a4ff"/><stop offset=".52" stop-color="#0876df"/><stop offset="1" stop-color="#0755b2"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#dcebf9"/><stop offset=".55" stop-color="#8da9c3"/><stop offset="1" stop-color="#e6f2ff"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000" flood-opacity=".5"/></filter>
+ </defs>
+ <rect width="512" height="512" rx="94" fill="url(#bg)"/>
+ <rect x="9" y="9" width="494" height="494" rx="85" fill="none" stroke="#416487" stroke-opacity=".33" stroke-width="2"/>
+ <!-- top blades -->
+ <g stroke="#233e58" stroke-width="3" filter="url(#shadow)">
+  <path d="M121 246 L58 173 Q45 155 51 139 L76 108 Q83 100 91 108 L185 226 Z" fill="url(#metal)"/>
+  <path d="M229 242 L229 100 Q229 77 247 49 L258 31 Q284 75 284 102 L284 242 Z" fill="url(#metal)"/>
+  <path d="M326 237 L418 109 Q428 96 439 113 L457 140 Q466 154 453 174 L392 245 Z" fill="url(#metal)"/>
+ </g>
+ <path d="M249 101 L249 179" stroke="#eff9ff" stroke-width="7" stroke-linecap="round"/>
+ <path d="M82 133 L124 180" stroke="#edf8ff" stroke-width="5" stroke-linecap="round"/>
+ <path d="M435 138 L396 190" stroke="#edf8ff" stroke-width="5" stroke-linecap="round"/>
+ <!-- lower blades -->
+ <g stroke="#233e58" stroke-width="3" filter="url(#shadow)">
+  <path d="M123 271 L61 350 Q49 364 58 379 L80 410 Q88 419 98 407 L185 286 Z" fill="url(#metal)"/>
+  <path d="M231 287 L231 411 Q231 435 255 468 Q282 436 282 412 L282 287 Z" fill="url(#metal)"/>
+  <path d="M329 283 L421 402 Q430 413 441 400 L456 380 Q464 365 450 348 L393 275 Z" fill="url(#metal)"/>
+ </g>
+ <path d="M251 354 L251 411" stroke="#eef7ff" stroke-width="6" stroke-linecap="round"/>
+ <!-- Inlaid blade lettering: dark navy matching background, no label boxes -->
+ <g font-family="Arial,Helvetica,sans-serif" font-weight="900" text-anchor="middle" font-size="16" letter-spacing=".35" fill="#101c32">
+  <text transform="translate(113 166) rotate(49)" dominant-baseline="middle">HASHER</text>
+  <text transform="translate(264 157) rotate(-90)" dominant-baseline="middle">FORMAT</text>
+  <text transform="translate(400 163) rotate(-51)" dominant-baseline="middle" font-size="15">CONVERTER</text>
+  <text transform="translate(109 346) rotate(-49)" dominant-baseline="middle">ENCODE</text>
+  <text transform="translate(264 373) rotate(90)" dominant-baseline="middle">DECODE</text>
+  <text transform="translate(403 347) rotate(51)" dominant-baseline="middle">TEXT</text>
+ </g>
+ <!-- Swiss knife blue handle -->
+ <g filter="url(#shadow)">
+  <rect x="42" y="214" width="428" height="100" rx="48" fill="#04182c" stroke="#73c9ff" stroke-width="4"/>
+  <rect x="46" y="217" width="420" height="93" rx="45" fill="url(#blue)"/>
+  <path d="M89 229 H420" stroke="#b2e7ff" stroke-width="3" stroke-opacity=".4" stroke-linecap="round"/>
+  <circle cx="91" cy="263" r="15" fill="#062a57" stroke="#9bdcff" stroke-width="5"/>
+  <circle cx="422" cy="263" r="15" fill="#062a57" stroke="#9bdcff" stroke-width="5"/>
+  <text x="256" y="265" font-size="35" font-family="Arial,Helvetica,sans-serif" font-weight="900" text-anchor="middle" fill="#fff" letter-spacing="2">SWISS</text>
+  <text x="256" y="293" font-size="22" font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" fill="#dbf0ff" letter-spacing="7">KNIFE</text>
+ </g>
+</svg>

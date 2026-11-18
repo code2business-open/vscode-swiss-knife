@@ -1,0 +1,403 @@
+{
+	"name": "swiss-knife",
+	"displayName": "Swiss Knife",
+	"icon": "image/swiss-knife-icon-512.png",
+	"description": "Hashers, converters, encoders, formatters and other utilities",
+	"version": "0.1.0",
+	"author": "Code2Business.com",
+	"publisher": "code2business",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.95.0"
+	},
+	"categories": [
+		"Other",
+		"Formatters"
+	],
+	"main": "./dist/extension.js",
+	"extensionKind": [
+		"workspace"
+	],
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": true
+		},
+		"virtualWorkspaces": true
+	},
+	"scripts": {
+		"generate": "node tools/generate.cjs",
+		"compile": "npm run generate && tsc -p .",
+		"test": "npm run compile && node --test test/unit.cjs",
+		"test:integration": "npm run compile && node test/run-integration.cjs",
+		"vscode:prepublish": "npm run compile",
+		"package": "vsce package --allow-missing-repository --out artifacts/swiss-knife-0.1.0.vsix",
+		"import:scripts": "node tools/import-scripts.cjs"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"@types/vscode": "~1.95.0",
+		"@vscode/test-electron": "^2.5.0",
+		"@vscode/vsce": "^3.0.0",
+		"jsonc-parser": "^3.3.1",
+		"typescript": "^5.7.0"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "swissKnife.hash.md5",
+				"category": "SK: Hash",
+				"title": "MD5"
+			},
+			{
+				"command": "swissKnife.hash.sha1",
+				"category": "SK: Hash",
+				"title": "SHA1"
+			},
+			{
+				"command": "swissKnife.hash.sha256",
+				"category": "SK: Hash",
+				"title": "SHA256"
+			},
+			{
+				"command": "swissKnife.hash.sha512",
+				"category": "SK: Hash",
+				"title": "SHA512"
+			},
+			{
+				"command": "swissKnife.convert.asciitohex",
+				"category": "SK: Convert",
+				"title": "ASCII To Hex"
+			},
+			{
+				"command": "swissKnife.convert.hextoascii",
+				"category": "SK: Convert",
+				"title": "Hex To ASCII"
+			},
+			{
+				"command": "swissKnife.convert.binarytodecimal",
+				"category": "SK: Convert",
+				"title": "Binary to Decimal"
+			},
+			{
+				"command": "swissKnife.convert.decimaltobinary",
+				"category": "SK: Convert",
+				"title": "Decimal to Binary"
+			},
+			{
+				"command": "swissKnife.convert.decimaltohex",
+				"category": "SK: Convert",
+				"title": "Decimal to Hex"
+			},
+			{
+				"command": "swissKnife.convert.hextodecimal",
+				"category": "SK: Convert",
+				"title": "Hex to Dec"
+			},
+			{
+				"command": "swissKnife.convert.hex2rgb",
+				"category": "SK: Convert",
+				"title": "Hex to RGB"
+			},
+			{
+				"command": "swissKnife.convert.rgbtohex",
+				"category": "SK: Convert",
+				"title": "RGB to Hex"
+			},
+			{
+				"command": "swissKnife.convert.androidiosstrings",
+				"category": "SK: Convert",
+				"title": "Android Strings to iOS Localizables"
+			},
+			{
+				"command": "swissKnife.convert.iosandroidstrings",
+				"category": "SK: Convert",
+				"title": "iOS Localizables to Android Strings"
+			},
+			{
+				"command": "swissKnife.convert.csvtojson",
+				"category": "SK: Convert",
+				"title": "CSV to JSON"
+			},
+			{
+				"command": "swissKnife.convert.jsontocsv",
+				"category": "SK: Convert",
+				"title": "JSON to CSV"
+			},
+			{
+				"command": "swissKnife.convert.jsontoyaml",
+				"category": "SK: Convert",
+				"title": "JSON to YAML"
+			},
+			{
+				"command": "swissKnife.convert.yamltojson",
+				"category": "SK: Convert",
+				"title": "YAML to JSON"
+			},
+			{
+				"command": "swissKnife.convert.jsontoquery",
+				"category": "SK: Convert",
+				"title": "JSON to Query String"
+			},
+			{
+				"command": "swissKnife.convert.querytojson",
+				"category": "SK: Convert",
+				"title": "Query String to JSON"
+			},
+			{
+				"command": "swissKnife.convert.datetotimestamp",
+				"category": "SK: Convert",
+				"title": "Date to Timestamp"
+			},
+			{
+				"command": "swissKnife.convert.datetoutc",
+				"category": "SK: Convert",
+				"title": "Date to UTC"
+			},
+			{
+				"command": "swissKnife.convert.fishhexpathconverter",
+				"category": "SK: Convert",
+				"title": "Fish PATH Hex Converter"
+			},
+			{
+				"command": "swissKnife.format.formatcss",
+				"category": "SK: Format",
+				"title": "Format CSS"
+			},
+			{
+				"command": "swissKnife.format.formatjson",
+				"category": "SK: Format",
+				"title": "Format JSON"
+			},
+			{
+				"command": "swissKnife.format.formatsql",
+				"category": "SK: Format",
+				"title": "Format SQL"
+			},
+			{
+				"command": "swissKnife.format.formatxml",
+				"category": "SK: Format",
+				"title": "Format XML"
+			},
+			{
+				"command": "swissKnife.minify.minifycss",
+				"category": "SK: Minify",
+				"title": "Minify CSS"
+			},
+			{
+				"command": "swissKnife.minify.minifyjson",
+				"category": "SK: Minify",
+				"title": "Minify JSON"
+			},
+			{
+				"command": "swissKnife.minify.minifysql",
+				"category": "SK: Minify",
+				"title": "Minify SQL"
+			},
+			{
+				"command": "swissKnife.minify.minifyxml",
+				"category": "SK: Minify",
+				"title": "Minify XML"
+			},
+			{
+				"command": "swissKnife.encode.base64encode",
+				"category": "SK: Encode",
+				"title": "Base64 Encode"
+			},
+			{
+				"command": "swissKnife.encode.htmlencode",
+				"category": "SK: Encode",
+				"title": "HTML Encode"
+			},
+			{
+				"command": "swissKnife.encode.htmlencodeall",
+				"category": "SK: Encode",
+				"title": "HTML Encode all characters"
+			},
+			{
+				"command": "swissKnife.encode.urlencode",
+				"category": "SK: Encode",
+				"title": "URL Encode"
+			},
+			{
+				"command": "swissKnife.encode.urlentitiesencode",
+				"category": "SK: Encode",
+				"title": "URL Entity Encode"
+			},
+			{
+				"command": "swissKnife.encode.addslashes",
+				"category": "SK: Encode",
+				"title": "Add Slashes"
+			},
+			{
+				"command": "swissKnife.encode.urldefang",
+				"category": "SK: Encode",
+				"title": "Defang"
+			},
+			{
+				"command": "swissKnife.encode.rot13",
+				"category": "SK: Encode",
+				"title": "Rot13"
+			},
+			{
+				"command": "swissKnife.decode.base64decode",
+				"category": "SK: Decode",
+				"title": "Base64 Decode"
+			},
+			{
+				"command": "swissKnife.decode.htmldecode",
+				"category": "SK: Decode",
+				"title": "HTML Decode"
+			},
+			{
+				"command": "swissKnife.decode.urldecode",
+				"category": "SK: Decode",
+				"title": "URL Decode"
+			},
+			{
+				"command": "swissKnife.decode.urlentitiesdecode",
+				"category": "SK: Decode",
+				"title": "URL Entities Decode"
+			},
+			{
+				"command": "swissKnife.decode.removeslashes",
+				"category": "SK: Decode",
+				"title": "Remove Slashes"
+			},
+			{
+				"command": "swissKnife.decode.urlrefang",
+				"category": "SK: Decode",
+				"title": "Refang"
+			},
+			{
+				"command": "swissKnife.decode.jwtdecode",
+				"category": "SK: Decode",
+				"title": "JWT Decode"
+			},
+			{
+				"command": "swissKnife.decode.phpunserialize",
+				"category": "SK: Decode",
+				"title": "PHP Unserialize"
+			},
+			{
+				"command": "swissKnife.text.camelcase",
+				"category": "SK: Text",
+				"title": "Camel Case"
+			},
+			{
+				"command": "swissKnife.text.collapse",
+				"category": "SK: Text",
+				"title": "Collapse lines"
+			},
+			{
+				"command": "swissKnife.text.countcharacters",
+				"category": "SK: Text",
+				"title": "Count Characters"
+			},
+			{
+				"command": "swissKnife.text.countlines",
+				"category": "SK: Text",
+				"title": "Count Lines"
+			},
+			{
+				"command": "swissKnife.text.countwords",
+				"category": "SK: Text",
+				"title": "Count Words"
+			},
+			{
+				"command": "swissKnife.text.deburr",
+				"category": "SK: Text",
+				"title": "Deburr"
+			},
+			{
+				"command": "swissKnife.text.downcase",
+				"category": "SK: Text",
+				"title": "Lower Case"
+			},
+			{
+				"command": "swissKnife.text.kebabcase",
+				"category": "SK: Text",
+				"title": "Kebab Case"
+			},
+			{
+				"command": "swissKnife.text.markdownquote",
+				"category": "SK: Text",
+				"title": "Markdown Quote"
+			},
+			{
+				"command": "swissKnife.text.natsort",
+				"category": "SK: Text",
+				"title": "Natural Sort Lines"
+			},
+			{
+				"command": "swissKnife.text.removeduplicates",
+				"category": "SK: Text",
+				"title": "Remove Duplicate Lines"
+			},
+			{
+				"command": "swissKnife.text.replacesmartquotes",
+				"category": "SK: Text",
+				"title": "Replace Smart Quotes"
+			},
+			{
+				"command": "swissKnife.text.reverselines",
+				"category": "SK: Text",
+				"title": "Reverse Lines"
+			},
+			{
+				"command": "swissKnife.text.reversestring",
+				"category": "SK: Text",
+				"title": "Reverse String"
+			},
+			{
+				"command": "swissKnife.text.shufflelines",
+				"category": "SK: Text",
+				"title": "Shuffle Lines"
+			},
+			{
+				"command": "swissKnife.text.snakecase",
+				"category": "SK: Text",
+				"title": "Snake Case"
+			},
+			{
+				"command": "swissKnife.text.sort",
+				"category": "SK: Text",
+				"title": "Sort lines"
+			},
+			{
+				"command": "swissKnife.text.sortjson",
+				"category": "SK: Text",
+				"title": "Sort JSON"
+			},
+			{
+				"command": "swissKnife.text.spongecase",
+				"category": "SK: Text",
+				"title": "Sponge Case"
+			},
+			{
+				"command": "swissKnife.text.startcase",
+				"category": "SK: Text",
+				"title": "Start Case"
+			},
+			{
+				"command": "swissKnife.text.trim",
+				"category": "SK: Text",
+				"title": "Trim"
+			},
+			{
+				"command": "swissKnife.text.upcase",
+				"category": "SK: Text",
+				"title": "Upper Case"
+			},
+			{
+				"command": "swissKnife.generate.loremipsum",
+				"category": "SK: Generate",
+				"title": "Lorem Ipsum"
+			},
+			{
+				"command": "swissKnife.calculate.sumall",
+				"category": "SK: Calculate",
+				"title": "Sum All"
+			}
+		]
+	}
+}

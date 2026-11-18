@@ -1,0 +1,1005 @@
+[
+  {
+    "id": "swissKnife.hash.md5",
+    "file": "MD5.js",
+    "category": "Hash",
+    "title": "MD5",
+    "metadata": {
+      "api": 1,
+      "name": "MD5 Checksum",
+      "description": "Computes the checksum of your text (Hex encoded).",
+      "author": "Ivan",
+      "icon": "fingerprint",
+      "tags": "strip,slashes,remove"
+    }
+  },
+  {
+    "id": "swissKnife.hash.sha1",
+    "file": "SHA1.js",
+    "category": "Hash",
+    "title": "SHA1",
+    "metadata": {
+      "api": 1,
+      "name": "SHA1 Hash",
+      "description": "Computes the SHA1 hash of your text (Hex encoded)",
+      "icon": "fingerprint",
+      "tags": "strip,slashes,remove"
+    }
+  },
+  {
+    "id": "swissKnife.hash.sha256",
+    "file": "SHA256.js",
+    "category": "Hash",
+    "title": "SHA256",
+    "metadata": {
+      "api": 1,
+      "name": "SHA256 Hash",
+      "description": "Computes the SHA256 hash of your text (Hex encoded)",
+      "icon": "fingerprint",
+      "tags": "strip,slashes,remove"
+    }
+  },
+  {
+    "id": "swissKnife.hash.sha512",
+    "file": "SHA512.js",
+    "category": "Hash",
+    "title": "SHA512",
+    "metadata": {
+      "api": 1,
+      "name": "SHA512 Hash",
+      "description": "Computes the SHA512 hash of your text (Hex encoded)",
+      "icon": "fingerprint",
+      "tags": "strip,slashes,remove"
+    }
+  },
+  {
+    "id": "swissKnife.convert.asciitohex",
+    "file": "ASCIIToHex.js",
+    "category": "Convert",
+    "title": "ASCII To Hex",
+    "metadata": {
+      "api": 1,
+      "name": "ASCII To Hex",
+      "description": "Converts ASCII characters to hexadecimal codes.",
+      "author": "aWZHY0yQH81uOYvH",
+      "icon": "metamorphose",
+      "tags": "ascii,hex,convert"
+    }
+  },
+  {
+    "id": "swissKnife.convert.hextoascii",
+    "file": "HexToASCII.js",
+    "category": "Convert",
+    "title": "Hex To ASCII",
+    "metadata": {
+      "api": 1,
+      "name": "Hex To ASCII",
+      "description": "Converts hexadecimal values into ASCII characters",
+      "author": "aWZHY0yQH81uOYvH",
+      "icon": "metamorphose",
+      "tags": "hex,ascii,convert"
+    }
+  },
+  {
+    "id": "swissKnife.convert.binarytodecimal",
+    "file": "BinaryToDecimal.js",
+    "category": "Convert",
+    "title": "Binary to Decimal",
+    "metadata": {
+      "api": 1,
+      "name": "Binary to Decimal",
+      "description": "Converts binary values to decimal.",
+      "author": "Maurice",
+      "icon": "metamorphose",
+      "tags": "decimal,binary,dec,bin"
+    }
+  },
+  {
+    "id": "swissKnife.convert.decimaltobinary",
+    "file": "DecimalToBinary.js",
+    "category": "Convert",
+    "title": "Decimal to Binary",
+    "metadata": {
+      "api": 1,
+      "name": "Decimal to Binary",
+      "description": "Converts decimal values to binary.",
+      "author": "Maurice",
+      "icon": "metamorphose",
+      "tags": "decimal,binary,dec,bin"
+    }
+  },
+  {
+    "id": "swissKnife.convert.decimaltohex",
+    "file": "DecimalToHex.js",
+    "category": "Convert",
+    "title": "Decimal to Hex",
+    "metadata": {
+      "api": 1,
+      "name": "Decimal to Hex",
+      "description": "Converts decimal values to hexadecimal.",
+      "author": "Maurice",
+      "icon": "metamorphose",
+      "tags": "decimal,hexadecimal,dec,hex"
+    }
+  },
+  {
+    "id": "swissKnife.convert.hextodecimal",
+    "file": "HexToDecimal.js",
+    "category": "Convert",
+    "title": "Hex to Dec",
+    "metadata": {
+      "api": 1,
+      "name": "Hex to Dec",
+      "description": "Converts hexadecimal to decimal.",
+      "author": "Maurice",
+      "icon": "metamorphose",
+      "tags": "decimal,hexadecimal,dec,hex"
+    }
+  },
+  {
+    "id": "swissKnife.convert.hex2rgb",
+    "file": "hex2rgb.js",
+    "category": "Convert",
+    "title": "Hex to RGB",
+    "metadata": {
+      "api": 1,
+      "name": "Hex to RGB",
+      "description": "Convert color in hexadecimal to RGB.",
+      "author": "Venkat",
+      "icon": "color-wheel",
+      "tags": "hex,color,rgb,convert"
+    }
+  },
+  {
+    "id": "swissKnife.convert.rgbtohex",
+    "file": "RGBToHex.js",
+    "category": "Convert",
+    "title": "RGB to Hex",
+    "metadata": {
+      "api": 1,
+      "name": "RGB to Hex",
+      "description": "Converts three RGB integer channels to an uppercase hexadecimal color.",
+      "author": "Code2Business",
+      "tags": "rgb,hex,color,convert"
+    }
+  },
+  {
+    "id": "swissKnife.convert.androidiosstrings",
+    "file": "AndroidIOSStrings.js",
+    "category": "Convert",
+    "title": "Android Strings to iOS Localizables",
+    "metadata": {
+      "api": 1,
+      "name": "Android Strings to iOS Localizables",
+      "description": "Converts Android Strings to iOS localizables.",
+      "author": "Manuel Kunz (https://github.com/KunzManuel)",
+      "icon": "translation",
+      "tags": "string,android,ios"
+    }
+  },
+  {
+    "id": "swissKnife.convert.iosandroidstrings",
+    "file": "IOSAndroidStrings.js",
+    "category": "Convert",
+    "title": "iOS Localizables to Android Strings",
+    "metadata": {
+      "api": 1,
+      "name": "iOS Localizables to Android Strings",
+      "description": "Converts iOS Localizables to Android Strings",
+      "author": "Manuel Kunz (https://github.com/KunzManuel)",
+      "icon": "translation",
+      "tags": "string,android,ios"
+    }
+  },
+  {
+    "id": "swissKnife.convert.csvtojson",
+    "file": "CSVtoJSON.js",
+    "category": "Convert",
+    "title": "CSV to JSON",
+    "metadata": {
+      "api": 2,
+      "name": "CSV to JSON",
+      "description": "Converts comma-separated tables to JSON.",
+      "author": "Ivan",
+      "icon": "table",
+      "tags": "table,convert",
+      "bias": -0.2
+    }
+  },
+  {
+    "id": "swissKnife.convert.jsontocsv",
+    "file": "JSONtoCSV.js",
+    "category": "Convert",
+    "title": "JSON to CSV",
+    "metadata": {
+      "api": 1,
+      "name": "JSON to CSV",
+      "description": "Converts JSON to comma-separated tables.",
+      "author": "Ivan",
+      "icon": "table",
+      "tags": "table,convert",
+      "bias": -0.2
+    }
+  },
+  {
+    "id": "swissKnife.convert.jsontoyaml",
+    "file": "JSONtoYAML.js",
+    "category": "Convert",
+    "title": "JSON to YAML",
+    "metadata": {
+      "api": 1,
+      "name": "JSON to YAML",
+      "description": "Converts JSON to YAML.",
+      "author": "Ivan",
+      "icon": "metamorphose",
+      "tags": "markup,convert"
+    }
+  },
+  {
+    "id": "swissKnife.convert.yamltojson",
+    "file": "YAMLtoJSON.js",
+    "category": "Convert",
+    "title": "YAML to JSON",
+    "metadata": {
+      "api": 1,
+      "name": "YAML to JSON",
+      "description": "Converts YAML to JSON.",
+      "author": "Ivan",
+      "icon": "metamorphose",
+      "tags": "markup,convert"
+    }
+  },
+  {
+    "id": "swissKnife.convert.jsontoquery",
+    "file": "JsonToQuery.js",
+    "category": "Convert",
+    "title": "JSON to Query String",
+    "metadata": {
+      "api": 1,
+      "name": "JSON to Query String",
+      "description": "Converts JSON to URL query string.",
+      "author": "Ota Mares <ota@mares.one>",
+      "icon": "website",
+      "tags": "url,query,params,json,convert,encode"
+    }
+  },
+  {
+    "id": "swissKnife.convert.querytojson",
+    "file": "QueryToJson.js",
+    "category": "Convert",
+    "title": "Query String to JSON",
+    "metadata": {
+      "api": 1,
+      "name": "Query String to JSON",
+      "description": "Converts URL query string to JSON.",
+      "author": "Ota Mares <ota@mares.one>",
+      "icon": "website",
+      "tags": "url,query,params,json,convert,decode"
+    }
+  },
+  {
+    "id": "swissKnife.convert.datetotimestamp",
+    "file": "DateToTimestamp.js",
+    "category": "Convert",
+    "title": "Date to Timestamp",
+    "metadata": {
+      "api": 1,
+      "name": "Date to Timestamp",
+      "description": "Converts dates to Unix timestamp.",
+      "author": "Noah Halford",
+      "icon": "watch",
+      "tags": "date,time,calendar,unix,timestamp"
+    }
+  },
+  {
+    "id": "swissKnife.convert.datetoutc",
+    "file": "DateToUTC.js",
+    "category": "Convert",
+    "title": "Date to UTC",
+    "metadata": {
+      "api": 1,
+      "name": "Date to UTC",
+      "description": "Converts dates and timestamps to UTC dates",
+      "author": "Ivan",
+      "icon": "watch",
+      "tags": "date,time,calendar,unix,timestamp"
+    }
+  },
+  {
+    "id": "swissKnife.convert.fishhexpathconverter",
+    "file": "FishHexPathConverter.js",
+    "category": "Convert",
+    "title": "Fish PATH Hex Converter",
+    "metadata": {
+      "api": 1,
+      "name": "Fish PATH Hex Converter",
+      "description": "Escapes terminal characters.",
+      "author": "Paul Seelman",
+      "icon": "broom",
+      "tags": "fish_user_paths, fish, hex, ascii, path, var"
+    }
+  },
+  {
+    "id": "swissKnife.format.formatcss",
+    "file": "FormatCSS.js",
+    "category": "Format",
+    "title": "Format CSS",
+    "metadata": {
+      "api": 1,
+      "name": "Format CSS",
+      "description": "Cleans and format CSS stylesheets.",
+      "author": "Ivan",
+      "icon": "broom",
+      "tags": "css,prettify,clean,indent",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.format.formatjson",
+    "file": "FormatJSON.js",
+    "category": "Format",
+    "title": "Format JSON",
+    "metadata": {
+      "api": 1,
+      "name": "Format JSON",
+      "description": "Cleans and format JSON documents.",
+      "author": "Ivan",
+      "icon": "broom",
+      "tags": "json,prettify,clean,indent"
+    }
+  },
+  {
+    "id": "swissKnife.format.formatsql",
+    "file": "FormatSQL.js",
+    "category": "Format",
+    "title": "Format SQL",
+    "metadata": {
+      "api": 1,
+      "name": "Format SQL",
+      "description": "Cleans and format SQL queries.",
+      "author": "Ivan",
+      "icon": "broom",
+      "tags": "mysql,sql,prettify,clean,indent",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.format.formatxml",
+    "file": "FormatXML.js",
+    "category": "Format",
+    "title": "Format XML",
+    "metadata": {
+      "api": 1,
+      "name": "Format XML",
+      "description": "Cleans and format XML/HTML documents.",
+      "author": "Ivan",
+      "icon": "broom",
+      "tags": "html,prettify,clean,indent",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.minify.minifycss",
+    "file": "MinifyCSS.js",
+    "category": "Minify",
+    "title": "Minify CSS",
+    "metadata": {
+      "api": 1,
+      "name": "Minify CSS",
+      "description": "Cleans and minifies CSS stylesheets.",
+      "author": "Ivan",
+      "icon": "broom",
+      "tags": "css,minify,clean,indent",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.minify.minifyjson",
+    "file": "MinifyJSON.js",
+    "category": "Minify",
+    "title": "Minify JSON",
+    "metadata": {
+      "api": 1,
+      "name": "Minify JSON",
+      "description": "Cleans and minifies JSON documents.",
+      "author": "riesentoaster",
+      "icon": "broom",
+      "tags": "html,minify,clean,indent",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.minify.minifysql",
+    "file": "MinifySQL.js",
+    "category": "Minify",
+    "title": "Minify SQL",
+    "metadata": {
+      "api": 1,
+      "name": "Minify SQL",
+      "description": "Cleans and minifies SQL queries.",
+      "author": "Ivan",
+      "icon": "broom",
+      "tags": "mysql,sql,minify,clean,indent",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.minify.minifyxml",
+    "file": "MinifyXML.js",
+    "category": "Minify",
+    "title": "Minify XML",
+    "metadata": {
+      "api": 1,
+      "name": "Minify XML",
+      "description": "Cleans and minifies XML/HTML documents.",
+      "author": "Ivan",
+      "icon": "broom",
+      "tags": "html,minify,clean,indent",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.encode.base64encode",
+    "file": "Base64Encode.js",
+    "category": "Encode",
+    "title": "Base64 Encode",
+    "metadata": {
+      "api": 1,
+      "name": "Base64 Encode",
+      "description": "Encodes your text to Base64",
+      "author": "See Source",
+      "icon": "metamorphose",
+      "tags": "base64,atob,encode"
+    }
+  },
+  {
+    "id": "swissKnife.encode.htmlencode",
+    "file": "HTMLEncode.js",
+    "category": "Encode",
+    "title": "HTML Encode",
+    "metadata": {
+      "api": 1,
+      "name": "HTML Encode",
+      "description": "Encodes HTML entities in your text",
+      "author": "See Source",
+      "icon": "HTML",
+      "tags": "html,encode,web"
+    }
+  },
+  {
+    "id": "swissKnife.encode.htmlencodeall",
+    "file": "HTMLEncodeAll.js",
+    "category": "Encode",
+    "title": "HTML Encode all characters",
+    "metadata": {
+      "api": 1,
+      "name": "HTML Encode all characters",
+      "description": "HTML Encodes every character in your text",
+      "author": "Ivan",
+      "icon": "HTML",
+      "tags": "html,encode,web,email",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.encode.urlencode",
+    "file": "URLEncode.js",
+    "category": "Encode",
+    "title": "URL Encode",
+    "metadata": {
+      "api": 1,
+      "name": "URL Encode",
+      "description": "Encodes URL entities in your text.",
+      "author": "Ivan",
+      "icon": "link",
+      "tags": "url,encode,convert"
+    }
+  },
+  {
+    "id": "swissKnife.encode.urlentitiesencode",
+    "file": "URLEntitiesEncode.js",
+    "category": "Encode",
+    "title": "URL Entity Encode",
+    "metadata": {
+      "api": 1,
+      "name": "URL Entity Encode",
+      "description": "URL Encodes all characters in your text.",
+      "author": "luisfontes19",
+      "icon": "percentage",
+      "tags": "url,encode,full",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.encode.addslashes",
+    "file": "AddSlashes.js",
+    "category": "Encode",
+    "title": "Add Slashes",
+    "metadata": {
+      "api": 1,
+      "name": "Add Slashes",
+      "description": "Escapes your text.",
+      "author": "Ivan",
+      "icon": "quote",
+      "tags": "add,slashes,escape"
+    }
+  },
+  {
+    "id": "swissKnife.encode.urldefang",
+    "file": "URLDefang.js",
+    "category": "Encode",
+    "title": "Defang",
+    "metadata": {
+      "api": 1,
+      "name": "Defang",
+      "description": "Defangs dangerous URLs and other IOCs",
+      "author": "Ross",
+      "icon": "link",
+      "tags": "defang,url,ioc"
+    }
+  },
+  {
+    "id": "swissKnife.encode.rot13",
+    "file": "Rot13.js",
+    "category": "Encode",
+    "title": "Rot13",
+    "metadata": {
+      "api": 1,
+      "name": "Rot13",
+      "description": "Applies the Rot13 cypher to your text.",
+      "author": "Paul Starr",
+      "icon": "roman",
+      "tags": "spoilers,encryption,plaintext"
+    }
+  },
+  {
+    "id": "swissKnife.decode.base64decode",
+    "file": "Base64Decode.js",
+    "category": "Decode",
+    "title": "Base64 Decode",
+    "metadata": {
+      "api": 1,
+      "name": "Base64 Decode",
+      "description": "Decodes your text from Base64",
+      "author": "See Source",
+      "icon": "metamorphose",
+      "tags": "base64,btoa,decode"
+    }
+  },
+  {
+    "id": "swissKnife.decode.htmldecode",
+    "file": "HTMLDecode.js",
+    "category": "Decode",
+    "title": "HTML Decode",
+    "metadata": {
+      "api": 1,
+      "name": "HTML Decode",
+      "description": "Decodes HTML entities in your text",
+      "author": "See Source",
+      "icon": "HTML",
+      "tags": "html,decode,web"
+    }
+  },
+  {
+    "id": "swissKnife.decode.urldecode",
+    "file": "URLDecode.js",
+    "category": "Decode",
+    "title": "URL Decode",
+    "metadata": {
+      "api": 1,
+      "name": "URL Decode",
+      "description": "Decodes URL entities in your text.",
+      "author": "Ivan",
+      "icon": "link",
+      "tags": "url,decode,convert"
+    }
+  },
+  {
+    "id": "swissKnife.decode.urlentitiesdecode",
+    "file": "URLEntitiesDecode.js",
+    "category": "Decode",
+    "title": "URL Entities Decode",
+    "metadata": {
+      "api": 1,
+      "name": "URL Entities Decode",
+      "description": "URL Decodes all characters in your text.",
+      "author": "luisfontes19",
+      "icon": "percentage",
+      "tags": "url,decode,full",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.decode.removeslashes",
+    "file": "RemoveSlashes.js",
+    "category": "Decode",
+    "title": "Remove Slashes",
+    "metadata": {
+      "api": 1,
+      "name": "Remove Slashes",
+      "description": "Unescapes your text.",
+      "author": "Ivan",
+      "icon": "quote",
+      "tags": "strip,slashes,remove,unescape"
+    }
+  },
+  {
+    "id": "swissKnife.decode.urlrefang",
+    "file": "URLRefang.js",
+    "category": "Decode",
+    "title": "Refang",
+    "metadata": {
+      "api": 1,
+      "name": "Refang",
+      "description": "Removes defanging from dangerous URLs and other IOCs",
+      "author": "Ross",
+      "icon": "link",
+      "tags": "refang,url,ioc"
+    }
+  },
+  {
+    "id": "swissKnife.decode.jwtdecode",
+    "file": "JWTDecode.js",
+    "category": "Decode",
+    "title": "JWT Decode",
+    "metadata": {
+      "api": 1,
+      "name": "JWT Decode",
+      "description": "Converts JWTs to JSON",
+      "author": "Nils Sonemann",
+      "icon": "identification",
+      "tags": "decode,jwt,token"
+    }
+  },
+  {
+    "id": "swissKnife.decode.phpunserialize",
+    "file": "PhpUnserialize.js",
+    "category": "Decode",
+    "title": "PHP Unserialize",
+    "metadata": {
+      "api": 1,
+      "name": "PHP Unserialize",
+      "description": "Convert PHP serialized data to JSON",
+      "author": "Rob Bogie",
+      "icon": "elephant",
+      "tags": "php,serialize,unserialize,json"
+    }
+  },
+  {
+    "id": "swissKnife.text.camelcase",
+    "file": "CamelCase.js",
+    "category": "Text",
+    "title": "Camel Case",
+    "metadata": {
+      "api": 1,
+      "name": "Camel Case",
+      "description": "convertsYourTextToCamelCase",
+      "author": "Ivan",
+      "icon": "camel",
+      "tags": "camel,case,function,lodash"
+    }
+  },
+  {
+    "id": "swissKnife.text.collapse",
+    "file": "Collapse.js",
+    "category": "Text",
+    "title": "Collapse lines",
+    "metadata": {
+      "api": 1,
+      "name": "Collapse lines",
+      "description": "Removes all linebreaks from your text",
+      "author": "Dennis",
+      "icon": "collapse",
+      "tags": "strip,remove,collapse,join"
+    }
+  },
+  {
+    "id": "swissKnife.text.countcharacters",
+    "file": "CountCharacters.js",
+    "category": "Text",
+    "title": "Count Characters",
+    "metadata": {
+      "api": 1,
+      "name": "Count Characters",
+      "description": "Get the length of your text",
+      "author": "Ivan",
+      "icon": "counter",
+      "tags": "count,length,size,character"
+    }
+  },
+  {
+    "id": "swissKnife.text.countlines",
+    "file": "CountLines.js",
+    "category": "Text",
+    "title": "Count Lines",
+    "metadata": {
+      "api": 1,
+      "name": "Count Lines",
+      "description": "Get the line count of your text",
+      "author": "andipaetzold",
+      "icon": "counter",
+      "tags": "count,length,size,line"
+    }
+  },
+  {
+    "id": "swissKnife.text.countwords",
+    "file": "CountWords.js",
+    "category": "Text",
+    "title": "Count Words",
+    "metadata": {
+      "api": 1,
+      "name": "Count Words",
+      "description": "Get the word count of your text",
+      "author": "Daniel Stone",
+      "icon": "counter",
+      "tags": "count,length,size,words"
+    }
+  },
+  {
+    "id": "swissKnife.text.deburr",
+    "file": "Deburr.js",
+    "category": "Text",
+    "title": "Deburr",
+    "metadata": {
+      "api": 1,
+      "name": "Deburr",
+      "description": "Converts your text to basic latin characters.",
+      "author": "Ivan",
+      "icon": "colosseum",
+      "tags": "burr,special,characters,function,lodash"
+    }
+  },
+  {
+    "id": "swissKnife.text.downcase",
+    "file": "Downcase.js",
+    "category": "Text",
+    "title": "Lower Case",
+    "metadata": {
+      "api": 1,
+      "name": "Downcase",
+      "description": "Converts your text to lowercase.",
+      "author": "Dan2552",
+      "icon": "type",
+      "tags": "downcase,lowercase"
+    }
+  },
+  {
+    "id": "swissKnife.text.kebabcase",
+    "file": "KebabCase.js",
+    "category": "Text",
+    "title": "Kebab Case",
+    "metadata": {
+      "api": 1,
+      "name": "Kebab Case",
+      "description": "converts-your-text-to-kebab-case.",
+      "author": "Ivan",
+      "icon": "kebab",
+      "tags": "kebab,case,function,lodash"
+    }
+  },
+  {
+    "id": "swissKnife.text.markdownquote",
+    "file": "MarkdownQuote.js",
+    "category": "Text",
+    "title": "Markdown Quote",
+    "metadata": {
+      "api": 1,
+      "name": "Markdown Quote",
+      "description": "Adds > to the start of every line of your text.",
+      "author": "Dan2552",
+      "icon": "term",
+      "tags": "quote,markdown"
+    }
+  },
+  {
+    "id": "swissKnife.text.natsort",
+    "file": "NatSort.js",
+    "category": "Text",
+    "title": "Natural Sort Lines",
+    "metadata": {
+      "api": 1,
+      "name": "Natural Sort Lines",
+      "description": "Sort lines with smart handling of numbers.",
+      "author": "Sebastiaan Besselsen",
+      "icon": "sort-numbers",
+      "tags": "sort,natural,natsort"
+    }
+  },
+  {
+    "id": "swissKnife.text.removeduplicates",
+    "file": "RemoveDuplicates.js",
+    "category": "Text",
+    "title": "Remove Duplicate Lines",
+    "metadata": {
+      "api": 1,
+      "name": "Remove Duplicate Lines",
+      "description": "Ensures each line of your text is unique.",
+      "author": "andipaetzold",
+      "icon": "filtration",
+      "tags": "unique,duplicate"
+    }
+  },
+  {
+    "id": "swissKnife.text.replacesmartquotes",
+    "file": "ReplaceSmartQuotes.js",
+    "category": "Text",
+    "title": "Replace Smart Quotes",
+    "metadata": {
+      "api": 1,
+      "name": "Replace Smart Quotes",
+      "description": "Replace Smart Quotes with their simpler values.",
+      "author": "Thomas Bauer (https://github.com/tbauer428)",
+      "icon": "broom",
+      "tags": "smart,quotes,quotations,quotation,smart-quotes,smart-quotations"
+    }
+  },
+  {
+    "id": "swissKnife.text.reverselines",
+    "file": "ReverseLines.js",
+    "category": "Text",
+    "title": "Reverse Lines",
+    "metadata": {
+      "api": 1,
+      "name": "Reverse Lines",
+      "description": "Flips every line of your text.",
+      "author": "@Clarko",
+      "icon": "flip",
+      "tags": "reverse,order,invert,mirror,flip,upside,down"
+    }
+  },
+  {
+    "id": "swissKnife.text.reversestring",
+    "file": "ReverseString.js",
+    "category": "Text",
+    "title": "Reverse String",
+    "metadata": {
+      "api": 1,
+      "name": "Reverse String",
+      "description": "!seod ti tahw sseuG",
+      "author": "See Source",
+      "icon": "flip",
+      "tags": "flip,mirror,invert"
+    }
+  },
+  {
+    "id": "swissKnife.text.shufflelines",
+    "file": "ShuffleLines.js",
+    "category": "Text",
+    "title": "Shuffle Lines",
+    "metadata": {
+      "api": 1,
+      "name": "Shuffle Lines",
+      "description": "Randomize each line of your text.",
+      "author": "@Clarko",
+      "icon": "dice",
+      "tags": "shuffle,random"
+    }
+  },
+  {
+    "id": "swissKnife.text.snakecase",
+    "file": "SnakeCase.js",
+    "category": "Text",
+    "title": "Snake Case",
+    "metadata": {
+      "api": 1,
+      "name": "Snake Case",
+      "description": "converts_your_text_to_snake_case.",
+      "author": "Ivan",
+      "icon": "snake",
+      "tags": "snake,case,function,lodash"
+    }
+  },
+  {
+    "id": "swissKnife.text.sort",
+    "file": "Sort.js",
+    "category": "Text",
+    "title": "Sort lines",
+    "metadata": {
+      "api": 1,
+      "name": "Sort lines",
+      "description": "Sort lines alphabetically.",
+      "author": "Sebastiaan Besselsen",
+      "icon": "sort-characters",
+      "tags": "sort,alphabet"
+    }
+  },
+  {
+    "id": "swissKnife.text.sortjson",
+    "file": "SortJSON.js",
+    "category": "Text",
+    "title": "Sort JSON",
+    "metadata": {
+      "api": 1,
+      "name": "Sort JSON",
+      "description": "Sort JSON",
+      "author": "MaDnh",
+      "icon": "sort-characters",
+      "tags": "json,sort"
+    }
+  },
+  {
+    "id": "swissKnife.text.spongecase",
+    "file": "SpongeCase.js",
+    "category": "Text",
+    "title": "Sponge Case",
+    "metadata": {
+      "api": 1,
+      "name": "Sponge Case",
+      "description": "CoNvERtS yoUR Text To A HIghER fOrM Of CoMMUnICAtIOn",
+      "author": "Paul Seelman",
+      "icon": "pineapple",
+      "tags": "bob,sarcasm,no,this,is,patrick"
+    }
+  },
+  {
+    "id": "swissKnife.text.startcase",
+    "file": "StartCase.js",
+    "category": "Text",
+    "title": "Start Case",
+    "metadata": {
+      "api": 1,
+      "name": "Start Case",
+      "description": "Converts Your Text To Start Case.",
+      "author": "Ivan",
+      "icon": "type",
+      "tags": "start,case,function,lodash"
+    }
+  },
+  {
+    "id": "swissKnife.text.trim",
+    "file": "Trim.js",
+    "category": "Text",
+    "title": "Trim",
+    "metadata": {
+      "api": 1,
+      "name": "Trim",
+      "description": "Trims leading and trailing whitespace.",
+      "author": "Joshua Nozzi",
+      "icon": "scissors",
+      "tags": "trim,whitespace,empty,space"
+    }
+  },
+  {
+    "id": "swissKnife.text.upcase",
+    "file": "Upcase.js",
+    "category": "Text",
+    "title": "Upper Case",
+    "metadata": {
+      "api": 1,
+      "name": "Upcase",
+      "description": "Converts your text to uppercase.",
+      "author": "Dan2552",
+      "icon": "type",
+      "tags": "upcase,uppercase,capital,capitalize,capitalization"
+    }
+  },
+  {
+    "id": "swissKnife.generate.loremipsum",
+    "file": "LoremIpsum.js",
+    "category": "Generate",
+    "title": "Lorem Ipsum",
+    "metadata": {
+      "api": 1,
+      "name": "Lorem Ipsum",
+      "description": "Generates Lorem Ipsum placeholder text.",
+      "author": "luisfontes19",
+      "icon": "type",
+      "tags": "generate,lorem,ipsum,text",
+      "bias": -0.1
+    }
+  },
+  {
+    "id": "swissKnife.calculate.sumall",
+    "file": "SumAll.js",
+    "category": "Calculate",
+    "title": "Sum All",
+    "metadata": {
+      "api": 1,
+      "name": "Sum All",
+      "description": "Sums up a list of numbers.",
+      "author": "Annie Tran",
+      "icon": "abacus",
+      "tags": "sum,calculator,addition,add"
+    }
+  }
+]
