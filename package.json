@@ -1,12 +1,16 @@
 {
-	"name": "swiss-knife",
-	"displayName": "Swiss Knife",
+	"name": "swiss-knife-dev-tools",
+	"displayName": "Swiss Knife Dev Tools",
 	"icon": "image/swiss-knife-icon-512.png",
 	"description": "Hashers, converters, encoders, formatters and other utilities",
 	"version": "0.1.0",
 	"author": "Code2Business.com",
 	"publisher": "code2business",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/code2business-open/vscode-swiss-knife.git"
+	},
 	"engines": {
 		"vscode": "^1.95.0"
 	},
