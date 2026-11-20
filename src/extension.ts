@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import catalog from './catalog.json';
 import { ScriptRuntime } from './runtime';
 import { transform } from './transform';
+import type { SqlOptions } from './sqlOptions';
 
 export function activate(context: vscode.ExtensionContext): void {
   const runtime = new ScriptRuntime(path.join(context.extensionPath, 'scripts'));
@@ -14,7 +15,12 @@ export function activate(context: vscode.ExtensionContext): void {
       try {
         const document = editor.document;
         const version = document.version;
-        const result = transform(runtime, command.file, document.getText(), editor.selections.map(s => ({ start: document.offsetAt(s.start), end: document.offsetAt(s.end) })), document.eol === vscode.EndOfLine.CRLF ? '\r\n' : '\n');
+        const config = vscode.workspace.getConfiguration('swissKnife', document.uri);
+        const options: SqlOptions | undefined = command.file === 'FormatSQL.js' ? {
+          sqlDialect: config.get<SqlOptions['sqlDialect']>('sqlDialect', 'mysql'),
+          sqlQuoteIdentifiers: config.get<boolean>('sqlQuoteIdentifiers', true)
+        } : undefined;
+        const result = transform(runtime, command.file, document.getText(), editor.selections.map(s => ({ start: document.offsetAt(s.start), end: document.offsetAt(s.end) })), document.eol === vscode.EndOfLine.CRLF ? '\r\n' : '\n', options);
         if (result.replacements.length) {
           if (document.version !== version || document.isClosed) throw new Error('The document changed. Run the command again.');
           const applied = await editor.edit(builder => {

@@ -1,8 +1,9 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as vm from 'node:vm';
+import type { SqlOptions } from './sqlOptions';
 
-export interface ScriptInput { text: string; fullText?: string; isSelection?: boolean; insertIndex?: number }
+export interface ScriptInput { text: string; fullText?: string; isSelection?: boolean; insertIndex?: number; options?: SqlOptions }
 export interface ScriptResult { text: string; info: string[] }
 
 export class ScriptRuntime {
@@ -50,6 +51,7 @@ export class ScriptRuntime {
       get selection() { return isSelection ? text : null; }, set selection(value: unknown) { if (isSelection) text = asText(value); },
       get fullText() { return fullText; }, set fullText(value: unknown) { fullText = asText(value); if (!isSelection) text = fullText; },
       isSelection,
+      options: Object.freeze({ ...input.options }),
       insert(value: unknown) {
         const added = asText(value);
         if (isSelection) { text = added; return; }

@@ -3,7 +3,7 @@
 	"displayName": "Swiss Knife Dev Tools",
 	"icon": "image/swiss-knife-icon-512.png",
 	"description": "Hashers, converters, encoders, formatters and other utilities",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"author": "Code2Business.com",
 	"publisher": "code2business",
 	"license": "MIT",
@@ -30,11 +30,11 @@
 	},
 	"scripts": {
 		"generate": "node tools/generate.cjs",
-		"compile": "npm run generate && tsc -p .",
-		"test": "npm run compile && node --test test/unit.cjs",
+		"compile": "npm run generate && node tools/build-sql.cjs && tsc -p .",
+		"test": "npm run compile && node --test test/unit.cjs test/sql.cjs",
 		"test:integration": "npm run compile && node test/run-integration.cjs",
 		"vscode:prepublish": "npm run compile",
-		"package": "vsce package --allow-missing-repository --out artifacts/swiss-knife-0.1.0.vsix",
+		"package": "vsce package --allow-missing-repository --out artifacts/swiss-knife-0.1.2.vsix",
 		"import:scripts": "node tools/import-scripts.cjs"
 	},
 	"devDependencies": {
@@ -42,7 +42,9 @@
 		"@types/vscode": "~1.95.0",
 		"@vscode/test-electron": "^2.5.0",
 		"@vscode/vsce": "^3.0.0",
+		"esbuild": "0.28.2",
 		"jsonc-parser": "^3.3.1",
+		"sql-formatter": "15.9.1",
 		"typescript": "^5.7.0"
 	},
 	"contributes": {
@@ -402,6 +404,37 @@
 				"category": "SK: Calculate",
 				"title": "Sum All"
 			}
-		]
+		],
+		"configuration": {
+			"title": "Swiss Knife",
+			"properties": {
+				"swissKnife.sqlDialect": {
+					"type": "string",
+					"enum": [
+						"mysql",
+						"mariadb",
+						"postgresql",
+						"transactsql",
+						"sqlite"
+					],
+					"enumDescriptions": [
+						"MySQL",
+						"MariaDB",
+						"PostgreSQL",
+						"SQL Server (T-SQL)",
+						"SQLite"
+					],
+					"default": "mysql",
+					"scope": "resource",
+					"description": "SQL dialect used by SK: Format: Format SQL."
+				},
+				"swissKnife.sqlQuoteIdentifiers": {
+					"type": "boolean",
+					"default": true,
+					"scope": "resource",
+					"description": "Automatically quote SQL database, schema, table, column, CTE, and alias identifiers using the selected dialect. Existing identifier quotes are preserved when disabled."
+				}
+			}
+		}
 	}
 }

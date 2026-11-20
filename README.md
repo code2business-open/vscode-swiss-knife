@@ -38,7 +38,7 @@ Open the Command Palette, run **Extensions: Install from VSIX...**, and select t
 To install a package built from this repository:
 
 ```sh
-code --install-extension ./artifacts/swiss-knife-0.1.0.vsix
+code --install-extension ./artifacts/swiss-knife-0.1.2.vsix
 ```
 
 ## Quick start
@@ -70,6 +70,30 @@ Counting commands show a message without changing the document. Commands preserv
 ### RGB to Hex
 
 **SK: Convert: RGB to Hex** accepts `rgb(255, 0, 128)`, `255,0,128`, or `255 0 128`. Each produces `#FF0080`. Channels must be integers from 0 to 255; alpha channels are not supported.
+
+## SQL formatting
+
+**SK: Format: Format SQL** uses tab indentation, puts clause headings on separate lines, and keeps short column lists, assignments, and function arguments inline. Lines longer than 120 characters wrap at structural boundaries: one column or assignment per line, with long function calls expanded into indented argument lists. Subqueries are indented recursively. Existing statement-ending semicolons appear on their own line.
+
+Configure SQL formatting in VS Code Settings by searching for **Swiss Knife SQL**, or add these resource-scoped settings to your user, workspace, or folder settings:
+
+```json
+{
+  "swissKnife.sqlDialect": "mysql",
+  "swissKnife.sqlQuoteIdentifiers": true
+}
+```
+
+| Setting | Default | Description |
+| --- | --- | --- |
+| `swissKnife.sqlDialect` | `mysql` | Choose `mysql`, `mariadb`, `postgresql`, `transactsql` (SQL Server), or `sqlite`. |
+| `swissKnife.sqlQuoteIdentifiers` | `true` | Quote database, schema, table, column, CTE, and alias identifiers. Set to `false` to stop adding quotes; existing quotes remain intact. |
+
+MySQL and MariaDB use backticks, PostgreSQL and SQLite use double quotes, and SQL Server uses brackets. Each component of a qualified reference is quoted separately: for example, `wc.sumLeft` becomes `` `wc`.`sumLeft` `` in MySQL. Previously unquoted PostgreSQL names are folded to lowercase before quoting to preserve identifier resolution; existing quoted names keep their exact case. Function names, SQL keywords, data types, literal values, parameters, and wildcard `*` are not automatically quoted.
+
+`WHERE`, `HAVING`, and JOIN `ON` conditions remain inline when their complete output line is at most **120 characters**, including added quotes, indentation, and JOIN prefixes. Above that limit, each logical condition starts on its own line, with `AND`/`OR` at the beginning of continuation lines. A literal tab counts as one character. Parenthesized groups preserve their grouping; `BETWEEN ... AND ...` and function arguments are not split at logical operators. Long function calls wrap at argument commas instead, recursively, keeping shorter nested calls inline. Comments and literal values remain intact. A single indivisible literal, identifier, or comment may exceed the limit.
+
+The formatter handles ordinary queries for the selected dialect. Stored procedures and custom statement delimiters are outside its scope. Formatting errors leave the document unchanged; check the selected dialect if a query cannot be formatted. SQL minification retains its existing behavior.
 
 ## All commands
 
@@ -257,4 +281,6 @@ Original third-party copyright and license notices are preserved in the bundled 
 
 Swiss Knife's initial 70 utility scripts and seven supporting libraries are adapted from [Boop by Ivan Mathy](https://github.com/IvanMathy/Boop), under the MIT license, using source commit `5cf6914381f6ed6ef004c3a7d470f241a248fcb6`. Original script authors and library copyright and license notices are retained.
 
-The compatibility adaptations make ASCIIToHex, HexToASCII, AndroidIOSStrings, IOSAndroidStrings, and Collapse use selection-aware text. Bundled imports use `@sk/` in place of `@boop/`, and `lodash.boop.js` is bundled as `lodash.js`. Test Script and Eval Javascript are excluded. The vkBeautify helper retains its original copyright and modification notes; its original adaptation note credits Boop and [kayhadrin/vkBeautify](https://github.com/kayhadrin/vkBeautify/).
+The compatibility adaptations make ASCIIToHex, HexToASCII, AndroidIOSStrings, IOSAndroidStrings, and Collapse use selection-aware text. The SQL command is locally maintained and preserved during upstream imports. Bundled imports use `@sk/` in place of `@boop/`, and `lodash.boop.js` is bundled as `lodash.js`. Test Script and Eval Javascript are excluded. The vkBeautify helper retains its original copyright and modification notes; its original adaptation note credits Boop and [kayhadrin/vkBeautify](https://github.com/kayhadrin/vkBeautify/).
+
+The SQL formatting helper bundles [SQL Formatter](https://github.com/sql-formatter-org/sql-formatter) and its Nearley parser dependency. Their MIT notices are included in `vendor/sql-formatter-LICENSE` and `vendor/nearley-LICENSE`.

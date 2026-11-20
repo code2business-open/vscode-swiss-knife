@@ -31,7 +31,9 @@ const actual = fs.readdirSync(path.join(root, 'scripts')).filter(n => n.endsWith
 if (catalog.length !== 71 || new Set(catalog.map(c => c.id)).size !== 71 || JSON.stringify(actual) !== JSON.stringify(catalog.map(c => c.file).sort())) throw new Error('Catalog must cover exactly 71 unique scripts');
 fs.writeFileSync(path.join(root, 'src/catalog.json'), JSON.stringify(catalog, null, 2) + '\n');
 const manifestPath = path.join(root, 'package.json');
-const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+const manifestSource = fs.readFileSync(manifestPath, 'utf8');
+const manifestIndent = manifestSource.match(/\n([ \t]+)"/)?.[1] ?? '  ';
+const manifest = JSON.parse(manifestSource);
 manifest.contributes.commands = catalog.map(c => ({ command: c.id, category: `SK: ${c.category}`, title: c.title }));
-fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, manifestIndent) + '\n');
 console.log('Generated 71 command contributions.');

@@ -17,7 +17,7 @@ test('catalog exactly covers 71 scripts and manifest commands', () => {
   assert.deepEqual(catalog.map(c => c.id), manifest.contributes.commands.map(c => c.command));
   assert.deepEqual(catalog.map(c => c.file).sort(), fs.readdirSync(scripts).filter(f => f.endsWith('.js')).sort());
   assert.ok(!catalog.some(c => /^(Test|EvalJavascript)\.js$/.test(c.file)));
-  assert.equal(fs.readdirSync(path.join(scripts, 'lib')).length, 7);
+  assert.equal(fs.readdirSync(path.join(scripts, 'lib')).length, 8);
   assert.equal(catalog.find(c => c.file === 'Trim.js').title, 'Trim');
 });
 

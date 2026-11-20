@@ -9,3 +9,9 @@ artifacts/**
 tsconfig.json
 package-lock.json
 dist/**/*.map
+
+# Source implementation is bundled into scripts/lib/sqlFormatter.js.
+dist/sqlFormatter.js
+dist/sqlOptions.js
+
+AGENTS.md
